@@ -21,7 +21,13 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position){
             //Complete this
-            default: return new PlaceholderFragment();
+            default:
+            case 0:
+                return new ImgFragment();
+            case 1:
+                return TxtFragment.newInstance(position);
+            case 2:
+                return TxtFragment.newInstance(position);
         }
 
     }
